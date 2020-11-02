@@ -1,4 +1,4 @@
-# Static Partition
+
 
 #  TASK : Increase or Decrease the Size of Static Partition in Linux.
 
