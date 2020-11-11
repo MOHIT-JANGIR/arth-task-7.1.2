@@ -97,9 +97,7 @@ As we have to resize the partition so in this step we will create the partition 
 
 In my case the previous partition was started from the 2048 sector so again I will create the partition from that sector only and this time I am going to increase the size from 30GiB to 40GiB.
 
-Image for post
 
-Image for post
 
 We can check the partition is create or not by listing the partition command.
 
