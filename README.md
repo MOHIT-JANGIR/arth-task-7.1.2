@@ -9,15 +9,15 @@
 
 ## *A hard disk can be divided into several partitions. Each partition functions as if it were a separate hard disk. There are several reasons why we create the partition:*
 
-### multiple operating systems on the same disk.
+### -->> multiple operating systems on the same disk.
 
-### `different file systems on different partitions.`
+### -->> `different file systems on different partitions.`
 
-### ``more efficient disk space management.``
+### -->> ``more efficient disk space management.``
 
-### *different security settings on different partitions.*
+### -->> *different security settings on different partitions.*
 
-### easier backup procedure.
+### -->> easier backup procedure.
 
 # Task Description:
 
