@@ -7,15 +7,15 @@
 
 # Linux Partition:
 
-## A hard disk can be divided into several partitions. Each partition functions as if it were a separate hard disk. There are several reasons why we create the partition:
+## *A hard disk can be divided into several partitions. Each partition functions as if it were a separate hard disk. There are several reasons why we create the partition:*
 
 ### multiple operating systems on the same disk.
 
-### different file systems on different partitions.
+### `different file systems on different partitions.`
 
-### more efficient disk space management.
+### ``more efficient disk space management.``
 
-### different security settings on different partitions.
+### *different security settings on different partitions.*
 
 ### easier backup procedure.
 
@@ -33,9 +33,9 @@
 
 ## Here we can see that one new hard disk with the name /dev/xvdf of 5GiB is added.
 
-# Step 2: Create one Primary partition of 2GiB
+# `Step 2: Create one Primary partition of 2GiB`
 
-## In this step, we will create one primary partition of 2GiB with the help of fdisk command.
+## *In this step, we will create one primary partition of 2GiB with the help of fdisk command.*
 
 # <p align="center">fdisk /dev/xvdf</p>
 
@@ -47,7 +47,7 @@
 
 ## Here we can see that one partition of size /dev/xvdf1 with the size of 5GiB.
 
-# Step 3: Format the partition and mount it with some directory
+# *Step 3: Format the partition and mount it with some directory*
 
 ## In this step, we will format the partition with the ext4 file system, and then we will mount with /data directory.
 
@@ -68,7 +68,7 @@
 ## In this step, we will put some data in the directory so that we can check if the data get lost or not after resizing the partition.
 ![Screenshot 2020-11-11 16 45 13](https://user-images.githubusercontent.com/61896468/98809762-201bc900-2444-11eb-951f-e00d8816a97b.png)
 
-# Step 5: Unmount the partition from the /data folder.
+# ``Step 5: Unmount the partition from the /data folder.``
 
 ## In this step, we will unmount the partition because we have to resize the partition size and the static partition doesn’t allow us to resize the partition on-line.
 
@@ -78,7 +78,7 @@
 
 ![Screenshot 2020-11-11 16 46 07](https://user-images.githubusercontent.com/61896468/98809765-214cf600-2444-11eb-9750-ade9784f4e58.png)
 
-## Here the partition /dev/xvdf1 has been mounted from the /data directory.
+## *Here the partition /dev/xvdf1 has been mounted from the /data directory.*
 
 ![Screenshot 2020-11-11 16 46 24](https://user-images.githubusercontent.com/61896468/98809775-25791380-2444-11eb-994a-520f7a1d39d1.png)
 
@@ -91,7 +91,7 @@
 ![Screenshot 2020-11-11 16 47 53](https://user-images.githubusercontent.com/61896468/98809779-26aa4080-2444-11eb-8430-871ac0e7a48b.png)
 
 
-# Step 7: Create that partition again with the changed size
+# `Step 7: Create that partition again with the changed size`
 ![Screenshot 2020-11-11 16 48 36](https://user-images.githubusercontent.com/61896468/98809790-2a3dc780-2444-11eb-8be9-0c6899ce5611.png)
 ## As we have to resize the partition so in this step we will create the partition again but the starting sector will be the same as the previous partition.
 
@@ -105,7 +105,7 @@
 
 ## We can clearly see that one partation /dev/xvdf1 of size 4GiB is created.
 
-# Step 8: Verify partition consistency with the e2fsck command
+# *Step 8: Verify partition consistency with the e2fsck command*
 
 ## In this step, we will verify the partition consistency by running the e2fsck command.
 
@@ -121,7 +121,7 @@
 
 ## Now the file system block size is the same as for partition configuration. Let’s mount the resized volume and check if our data is still there or not.
 
-# Step 9: Mount the resize volume and check the data
+# `Step 9: Mount the resize volume and check the data`
 
 ![Screenshot 2020-11-11 16 51 04](https://user-images.githubusercontent.com/61896468/98809807-2f027b80-2444-11eb-970c-c073754ba239.png)
 
@@ -129,6 +129,8 @@
 
 ![Screenshot 2020-11-11 16 51 35](https://user-images.githubusercontent.com/61896468/98809809-3033a880-2444-11eb-9602-6613b6727730.png)
 
-## We can clearly see that our data is still there in the directory.
+## *We can clearly see that our data is still there in the directory.*
 
-# Thank You !!
+# Thank You for reading !!
+
+#  <p align="center"> so finally i have completed `ARTH TASK 7.1.2`,thanks a lot vimal sir and all the 24*7 working technical volunteers for all your seamless and thankful support  </p>
