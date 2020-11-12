@@ -27,7 +27,7 @@
 
 ## In the first step add one hard disk to the VM, we can see the hard disk with the fdisk command.
 
-# fdisk -l
+# <p align="center">fdisk -l</p>
 
 ![Screenshot 2020-11-11 16 37 27](https://user-images.githubusercontent.com/61896468/98809743-1a25e800-2444-11eb-965b-57bbed11f348.png)
 
@@ -37,7 +37,7 @@
 
 ## In this step, we will create one primary partition of 2GiB with the help of fdisk command.
 
-# fdisk /dev/xvdf
+# <p align="center">fdisk /dev/xvdf</p>
 
 ![Screenshot 2020-11-11 16 40 24](https://user-images.githubusercontent.com/61896468/98809745-1b571500-2444-11eb-8f94-5a66d4ca89ac.png)
 
@@ -51,15 +51,15 @@
 
 ## In this step, we will format the partition with the ext4 file system, and then we will mount with /data directory.
 
-# mkfs.ext4 /dev/xvdf1
+# <p align="center">mkfs.ext4 /dev/xvdf1</p>
 
-# mount /dev/xvdf1 /data
+# <p align="center">mount /dev/xvdf1 /data</p>
 
 ![Screenshot 2020-11-11 16 43 35](https://user-images.githubusercontent.com/61896468/98809755-1db96f00-2444-11eb-959b-826064e809dc.png)
 
 ## We can verify that the partition is mounted with /data folder or not with df command.
 
-# df -h
+# <p align="center">df -h</p>
 
 ![Screenshot 2020-11-11 16 44 05](https://user-images.githubusercontent.com/61896468/98809757-1eea9c00-2444-11eb-91da-be9f5751e7b6.png)
 
@@ -74,7 +74,7 @@
 
 ## To unmount the partition we can use the umount command.
 
-# umount /dev/xvdf1
+# <p align="center">umount /dev/xvdf1</p>
 
 ![Screenshot 2020-11-11 16 46 07](https://user-images.githubusercontent.com/61896468/98809765-214cf600-2444-11eb-9750-ade9784f4e58.png)
 
@@ -109,13 +109,13 @@
 
 ## In this step, we will verify the partition consistency by running the e2fsck command.
 
-# e2fsck -f /dev/xvdf1
+# <p align="center">e2fsck -f /dev/xvdf1</p>
 
 ![Screenshot 2020-11-11 16 50 05](https://user-images.githubusercontent.com/61896468/98809795-2c078b00-2444-11eb-81ff-c97aa64381cb.png)
 
 # Here it is showing that there is some mismatch in the file system configuration and current partition size. To fix this issue we have to use the resize2fs command.
 
-# resize2fs /dev/xvdf1
+# <p align="center">resize2fs /dev/xvdf1</p>
 
 ![Screenshot 2020-11-11 16 50 28](https://user-images.githubusercontent.com/61896468/98809802-2dd14e80-2444-11eb-8ff3-5404bc50bb98.png)
 
