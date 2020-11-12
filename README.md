@@ -21,7 +21,7 @@
 
 # Task Description:
 
-## In this task, we have to increase or decrease the size of static partition Linux. In Linux, the primary partition that we crease don’t allow to increase or decrease the partition size if we do we have to change the format it again but the issues are that if we format the partition again then we will not be able to access the data that we had stored. So we have to find some way through which we can increase or decrease the size of the static partition by formatting it again.
+## In this task, we have to increase or decrease the size of static partition Linux. In Linux, the primary partition that we create don’t allow to increase or decrease the partition size if we do we have to change the format it again but the issues are that if we format the partition again then we will not be able to access the data that we had stored. So we have to find some way through which we can increase or decrease the size of the static partition by formatting it again.
 
 # Step 1: Add one Hard Disk to the VM
 
