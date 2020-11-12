@@ -31,29 +31,29 @@
 
 ![Screenshot 2020-11-11 16 37 27](https://user-images.githubusercontent.com/61896468/98809743-1a25e800-2444-11eb-965b-57bbed11f348.png)
 
-## Here we can see that one new hard disk with the name /dev/sdb of 50GiB is added.
+## Here we can see that one new hard disk with the name /dev/xvdf of 5GiB is added.
 
-# Step 2: Create one Primary partition of 30GiB
+# Step 2: Create one Primary partition of 2GiB
 
-## In this step, we will create one primary partition of 30GiB with the help of fdisk command.
+## In this step, we will create one primary partition of 2GiB with the help of fdisk command.
 
-# fdisk /dev/sdb
+# fdisk /dev/xvdf
 
 ![Screenshot 2020-11-11 16 40 24](https://user-images.githubusercontent.com/61896468/98809745-1b571500-2444-11eb-8f94-5a66d4ca89ac.png)
 
-## Now we can check the partition is a crate or not.
+## Now we can check the partition is a created or not.
 
 ![Screenshot 2020-11-11 16 40 58](https://user-images.githubusercontent.com/61896468/98809752-1c884200-2444-11eb-81d6-6ab3e0a23bf3.png)
 
-## Here we can see that one partition of size /dev/sdb1 with the size of 30GiB.
+## Here we can see that one partition of size /dev/xvdf1 with the size of 5GiB.
 
 # Step 3: Format the partition and mount it with some directory
 
 ## In this step, we will format the partition with the ext4 file system, and then we will mount with /data directory.
 
-# mkfs.ext4 /dev/sdb1
+# mkfs.ext4 /dev/xvdf1
 
-# mount /dev/sdb1 /data
+# mount /dev/xvdf1 /data
 
 ![Screenshot 2020-11-11 16 43 35](https://user-images.githubusercontent.com/61896468/98809755-1db96f00-2444-11eb-959b-826064e809dc.png)
 
@@ -74,11 +74,11 @@
 
 ## To unmount the partition we can use the umount command.
 
-# umount /dev/sdb1
+# umount /dev/xvdf1
 
 ![Screenshot 2020-11-11 16 46 07](https://user-images.githubusercontent.com/61896468/98809765-214cf600-2444-11eb-9750-ade9784f4e58.png)
 
-## Here the partition /dev/sdb1 has been mounted from the /data directory.
+## Here the partition /dev/xvdf1 has been mounted from the /data directory.
 
 ![Screenshot 2020-11-11 16 46 24](https://user-images.githubusercontent.com/61896468/98809775-25791380-2444-11eb-994a-520f7a1d39d1.png)
 
@@ -86,13 +86,13 @@
 
 # Step 6: Create the existing partition
 
-## In this step first, we will create the partition /dev/sdb1 so that we can change the size of the partition.
+## We will first delete the partition having size 2 GIB
 
 ![Screenshot 2020-11-11 16 47 53](https://user-images.githubusercontent.com/61896468/98809779-26aa4080-2444-11eb-8430-871ac0e7a48b.png)
+
+
+# Step 7: Create that partition again with the changed size
 ![Screenshot 2020-11-11 16 48 36](https://user-images.githubusercontent.com/61896468/98809790-2a3dc780-2444-11eb-8be9-0c6899ce5611.png)
-
-Step 7: Create that partition again with the changed size
-
 As we have to resize the partition so in this step we will create the partition again but the starting sector will be the same as the previous partition.
 
 In my case the previous partition was started from the 2048 sector so again I will create the partition from that sector only and this time I am going to increase the size from 30GiB to 40GiB.
