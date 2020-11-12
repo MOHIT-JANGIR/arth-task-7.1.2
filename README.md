@@ -93,42 +93,42 @@
 
 # Step 7: Create that partition again with the changed size
 ![Screenshot 2020-11-11 16 48 36](https://user-images.githubusercontent.com/61896468/98809790-2a3dc780-2444-11eb-8be9-0c6899ce5611.png)
-As we have to resize the partition so in this step we will create the partition again but the starting sector will be the same as the previous partition.
+## As we have to resize the partition so in this step we will create the partition again but the starting sector will be the same as the previous partition.
 
-In my case the previous partition was started from the 2048 sector so again I will create the partition from that sector only and this time I am going to increase the size from 30GiB to 40GiB.
+## In my case the previous partition was started from the 2048 sector so again I will create the partition from that sector only and this time I am going to increase the size from 2GiB to 4GiB.
 
 
 
-We can check the partition is create or not by listing the partition command.
+## We can check the partition is created or not by listing the partition.
 
 ![Screenshot 2020-11-11 16 49 35](https://user-images.githubusercontent.com/61896468/98809791-2ad65e00-2444-11eb-8149-edbe8c23a319.png)
 
-We can clearly see that one partation /dev/sdb1 of size 40GiB is created.
+## We can clearly see that one partation /dev/xvdf1 of size 4GiB is created.
 
-Step 8: Verify partition consistency with the e2fsck command
+# Step 8: Verify partition consistency with the e2fsck command
 
-In this step, we will verify the partition consistency by running the e2fsck command.
+## In this step, we will verify the partition consistency by running the e2fsck command.
 
-e2fsck -f /dev/sdb1
+# e2fsck -f /dev/xvdf1
 
 ![Screenshot 2020-11-11 16 50 05](https://user-images.githubusercontent.com/61896468/98809795-2c078b00-2444-11eb-81ff-c97aa64381cb.png)
 
-Here it is showing that there is some mismatch in the file system configuration and current partition size. To fix this issue we have to use the resize2fs command.
+# Here it is showing that there is some mismatch in the file system configuration and current partition size. To fix this issue we have to use the resize2fs command.
 
-resize2fs /dev/sdb1
+# resize2fs /dev/xvdf1
 
 ![Screenshot 2020-11-11 16 50 28](https://user-images.githubusercontent.com/61896468/98809802-2dd14e80-2444-11eb-8ff3-5404bc50bb98.png)
 
-Now the file system block size is the same as for partition configuration. Let’s mount the resized volume and check if our data is still there or not.
+## Now the file system block size is the same as for partition configuration. Let’s mount the resized volume and check if our data is still there or not.
 
-Step 9: Mount the resize volume and check the data
+# Step 9: Mount the resize volume and check the data
 
 ![Screenshot 2020-11-11 16 51 04](https://user-images.githubusercontent.com/61896468/98809807-2f027b80-2444-11eb-970c-c073754ba239.png)
 
-Here we have mounted the volume with the /data directory.
+## Here we have mounted the volume with the /data directory.
 
 ![Screenshot 2020-11-11 16 51 35](https://user-images.githubusercontent.com/61896468/98809809-3033a880-2444-11eb-9602-6613b6727730.png)
 
-We can clearly see that our data is still there in the directory.
+## We can clearly see that our data is still there in the directory.
 
-Thank You !!
+# Thank You !!
